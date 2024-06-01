@@ -2,18 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Contact</title>
+    <title>News</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Travello template project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
-    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet' %}" type="text/css">
     <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/contact.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/contact_responsive.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/news.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/news_responsive.css' %}">
   </head>
   <body>
 
@@ -33,8 +33,8 @@
                       <li><a href="{% url 'index' %}">Home</a></li>
                       <li><a href="{% url 'about' %}">About us</a></li>
                       <li><a href="#">Services</a></li>
-                      <li><a href="{% url 'news' %}">News</a></li>
-                      <li class="active"><a href="{% url 'contact' %}">Contact</a></li>
+                      <li class="active"><a href="{% url 'news' %}">News</a></li>
+                      <li><a href="{% url 'contact' %}">Contact</a></li>
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">Call us: 00-56 445 678 33</div>
@@ -94,7 +94,7 @@
       <!-- Home -->
 
       <div class="home">
-        <div class="background_image" style="background-image:url({% static 'images/contact.jpg' %})"></div>
+        <div class="background_image" style="background-image:url({% static 'images/news.jpg' %})"></div>
       </div>
 
       <!-- Search -->
@@ -122,68 +122,176 @@
         </div>
       </div>
 
-      <!-- Contact -->
+      <!-- News -->
 
-      <div class="contact">
+      <div class="news">
         <div class="container">
           <div class="row">
 
-            <!-- Get in touch -->
-            <div class="col-lg-6">
-              <div class="contact_content">
-                <div class="contact_title">Get in touch with us</div>
-                <div class="contact_text">
-                  <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.</p>
+            <!-- News Container -->
+            <div class="col-lg-8">
+              <div class="news_container">
+                
+                <!-- News Post -->
+                <div class="news_post">
+                  <div class="news_post_image"><img src="{% static 'images/news_4.jpg' %}" alt=""></div>
+                  <div class="news_post_content">
+                    <div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+                      <div>02</div>
+                      <div>june</div>
+                    </div>
+                    <div class="news_post_title"><a href="#">Best tips to travel light</a></div>
+                    <div class="news_post_category">
+                      <ul>
+                        <li><a href="#">lifestyle & travel</a></li>
+                      </ul>
+                    </div>
+                    <div class="news_post_text">
+                      <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+                    </div>
+                    <div class="news_post_link"><a href="#">Read More</a></div>
+                  </div>
                 </div>
-                <div class="contact_list">
-                  <ul>
-                    <li>
-                      <div>address:</div>
-                      <div>1481 Creekside Lane Avila Beach, CA 931</div>
-                    </li>
-                    <li>
-                      <div>phone:</div>
-                      <div>+53 345 7953 32453</div>
-                    </li>
-                    <li>
-                      <div>email:</div>
-                      <div>yourmail@gmail.com</div>
-                    </li>
-                  </ul>
+
+                <!-- News Post -->
+                <div class="news_post">
+                  <div class="news_post_image"><img src="{% static 'images/news_5.jpg' %}" alt=""></div>
+                  <div class="news_post_content">
+                    <div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+                      <div>02</div>
+                      <div>june</div>
+                    </div>
+                    <div class="news_post_title"><a href="#">10 Amazing Destination for you this summer</a></div>
+                    <div class="news_post_category">
+                      <ul>
+                        <li><a href="#">lifestyle & travel</a></li>
+                      </ul>
+                    </div>
+                    <div class="news_post_text">
+                      <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+                    </div>
+                    <div class="news_post_link"><a href="#">Read More</a></div>
+                  </div>
                 </div>
+
+                <!-- News Post -->
+                <div class="news_post">
+                  <div class="news_post_image"><img src="{% static 'images/news_6.jpg' %}" alt=""></div>
+                  <div class="news_post_content">
+                    <div class="news_post_date d-flex flex-row align-items-end justify-content-start">
+                      <div>02</div>
+                      <div>june</div>
+                    </div>
+                    <div class="news_post_title"><a href="#">How to organize your perfect vacation</a></div>
+                    <div class="news_post_category">
+                      <ul>
+                        <li><a href="#">lifestyle & travel</a></li>
+                      </ul>
+                    </div>
+                    <div class="news_post_text">
+                      <p>Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet.</p>
+                    </div>
+                    <div class="news_post_link"><a href="#">Read More</a></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination">
+                <ul class="d-flex flex-row align-items-start justify-content-start">
+                  <li class="active"><a href="#">1.</a></li>
+                  <li><a href="#">2.</a></li>
+                  <li><a href="#">3.</a></li>
+                  <li><a href="#">4.</a></li>
+                  <li><a href="#">5.</a></li>
+                </ul>
               </div>
             </div>
 
-            <!-- Contact Form -->
-            <div class="col-lg-6">
-              <div class="contact_form_container">
-                <form action="#" id="contact_form" class="contact_form">
-                  <div style="margin-bottom: 18px"><input type="text" class="contact_input contact_input_name inpt" placeholder="Your Name" required="required"><div class="input_border"></div></div>
-                  <div class="row">
-                    <div class="col-lg-6" style="margin-bottom: 18px">
-                      <div><input type="text" class="contact_input contact_input_email inpt" placeholder="Your E-mail" required="required"><div class="input_border"></div></div>
+            <!-- News Sidebar -->
+            <div class="col-lg-4">
+              <div class="news_sidebar">
+
+                <!-- Categories -->
+                <div class="categories">
+                  <div class="sidebar_title">Categories</div>
+                  <div class="sidebar_list">
+                    <ul>
+                      <li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Travels<span class="ml-auto">(09)</span></div></a></li>
+                      <li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Organization<span class="ml-auto">(12)</span></div></a></li>
+                      <li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Tips & Tricks<span class="ml-auto">(16)</span></div></a></li>
+                      <li><a href="#"><div class="d-flex flex-row align-items-start justify-content-start">Uncategorized<span class="ml-auto">(22)</span></div></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Latest News -->
+                <div class="latest">
+                  <div class="sidebar_title">Latest News</div>
+                  <div class="latest_container">
+                    
+                    <!-- Latest Post -->
+                    <div class="latest_post d-flex flex-row align-items-start justify-content-start">
+                      <div class="latest_post_image"><img src="{% static 'images/latest_1.jpg' %}" alt=""></div>
+                      <div class="latest_post_content">
+                        <div class="latest_post_date d-flex flex-row align-items-end justify-content-start">
+                          <div class="latest_post_day">02</div>
+                          <div class="latest_post_month">june</div>
+                        </div>
+                        <div class="latest_post_title"><a href="#">Best tips to travel light</a></div>
+                        <div class="latest_post_text"><p>Pellentesque sit amet..</p></div>
+                      </div>
                     </div>
-                    <div class="col-lg-6" style="margin-bottom: 18px">
-                      <div><input type="text" class="contact_input contact_input_subject inpt" placeholder="Subject" required="required"><div class="input_border"></div></div>
+
+                    <!-- Latest Post -->
+                    <div class="latest_post d-flex flex-row align-items-start justify-content-start">
+                      <div class="latest_post_image"><img src="{% static 'images/latest_2.jpg' %}" alt=""></div>
+                      <div class="latest_post_content">
+                        <div class="latest_post_date d-flex flex-row align-items-end justify-content-start">
+                          <div class="latest_post_day">02</div>
+                          <div class="latest_post_month">june</div>
+                        </div>
+                        <div class="latest_post_title"><a href="#">Best tips to travel light</a></div>
+                        <div class="latest_post_text"><p>Pellentesque sit amet..</p></div>
+                      </div>
+                    </div>
+
+                    <!-- Latest Post -->
+                    <div class="latest_post d-flex flex-row align-items-start justify-content-start">
+                      <div class="latest_post_image"><img src="{% static 'images/latest_3.jpg' %}" alt=""></div>
+                      <div class="latest_post_content">
+                        <div class="latest_post_date d-flex flex-row align-items-end justify-content-start">
+                          <div class="latest_post_day">02</div>
+                          <div class="latest_post_month">june</div>
+                        </div>
+                        <div class="latest_post_title"><a href="#">Best tips to travel light</a></div>
+                        <div class="latest_post_text"><p>Pellentesque sit amet..</p></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="travello">
+                  <div class="background_image" style="background-image:url({% static 'images/travello.jpg' %})"></div>
+                  <div class="travello_content">
+                    <div class="travello_content_inner">
+                      <div></div>
+                      <div></div>
                     </div>
                   </div>
-                  <div><textarea class="contact_textarea contact_input inpt" placeholder="Message" required="required"></textarea><div class="input_border" style="bottom:3px"></div></div>
-                  <button class="contact_button">send</button>
-                </form>
+                  <div class="travello_container">
+                    <a href="#">
+                      <div class="d-flex flex-column align-items-center justify-content-end">
+                        <span class="travello_title">Get a 20% Discount</span>
+                        <span class="travello_subtitle">Buy Your Vacation Online Now</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map -->
-
-      <div class="contact_map">
-        <!-- Google Map -->
-        <div class="map">
-          <div id="google_map" class="google_map">
-            <div class="map_container">
-              <div id="map"></div>
             </div>
           </div>
         </div>
@@ -204,8 +312,8 @@
                 <div class="newsletter_form_container">
                   <form action="#" class="newsletter_form d-flex flex-md-row flex-column align-items-start justify-content-between" id="newsletter_form">
                     <div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-                      <div><input type="text" class="newsletter_input newsletter_input_name inpt" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
-                      <div><input type="email" class="newsletter_input newsletter_input_email inpt" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
+                      <div><input type="text" class="newsletter_input newsletter_input_name" id="newsletter_input_name" placeholder="Name" required="required"><div class="input_border"></div></div>
+                      <div><input type="email" class="newsletter_input newsletter_input_email" id="newsletter_input_email" placeholder="Your e-mail" required="required"><div class="input_border"></div></div>
                     </div>
                     <div><button class="newsletter_button">subscribe</button></div>
                   </form>
@@ -274,7 +382,6 @@
     <script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
     <script src="{% static 'plugins/easing/easing.js' %}"></script>
     <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA></script>
-    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/news.js' %}"></script>
   </body>
 </html>
