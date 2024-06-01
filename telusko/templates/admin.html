@@ -1,14 +1,30 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Crear Venta</title>
+    <title>Agregar Lugar</title>
   </head>
   <body>
-    <h1>Crear Venta</h1>
+    <h1>Agregar Lugar</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Guardar</button>
+        <button type="submit" name="crear">Guardar</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="Eliminar">Guardar</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="Modificar">Guardar</button>
+    </form>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" name="Listar">Guardar</button>
     </form>
   </body>
 </html>

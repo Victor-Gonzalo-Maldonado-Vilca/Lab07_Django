@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Destination
+from .forms import DestinationForm
 # Create your views here.
 
 def index(request):
@@ -17,4 +18,12 @@ def news(request):
     return render(request, 'news.html');
     
 def admin(request):
-    return render(request, 'admin.html');
+    if request.method == 'POST':
+        form = DestinationForm(request.POST)
+        if form.is_valid():
+          form.save()
+          return redirect('admin')
+    else:
+        form = DestinationForm()
+    return render(request, 'admin.html', {'form': form})
+    
