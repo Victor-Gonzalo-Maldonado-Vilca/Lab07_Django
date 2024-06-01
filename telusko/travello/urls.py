@@ -8,4 +8,5 @@ urlpatterns = [
   path('contact/',views.contact, name='contact'),
   path('news/',views.news, name='news'),
   path('admin/',views.admin, name='admin'),
+  path('/modificar/<str:ciudad>/', views.modificar, name='modificar'),
 ]

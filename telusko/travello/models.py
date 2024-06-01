@@ -17,3 +17,9 @@ class Delete(models.Model):
     
     def __str__(self):
         return self.nombreCiudad
+      
+class Modificar(models.Model):
+    nombreCiudad = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.nombreCiudad
