@@ -2,29 +2,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Agregar Lugar</title>
+    <title>Administrar Lugares</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
   </head>
   <body>
     <h1>Agregar Lugar</h1>
     <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ crear_form.as_p }}
-        <button type="submit" name="crear">Guardar</button>
+      {% csrf_token %}
+      {{ crear_form.as_p }}
+      <button type="submit" name="crear">Guardar</button>
     </form>
     <hr>
     <h1>Eliminar Lugar</h1>
     <form method="post">
-        {% csrf_token %}
-        {{ eliminar_form.as_p }}
-        <button type="submit" name="eliminar">Guardar</button>
+      {% csrf_token %}
+      {{ eliminar_form.as_p }}
+      <button type="submit" name="eliminar">Guardar</button>
     </form>
     <hr>
     <h1>Modificar Lugar</h1>
     <form method="post">
-        {% csrf_token %}
-        {{ modificar_form.as_p }}
-        
-        <button type="submit" name="modificar">Guardar</button>
+      {% csrf_token %}
+      {{ modificar_form.as_p }}
+      <button type="submit" name="modificar">Guardar</button>
     </form>
     <hr>
     <div class="destinations" id="destinations">
@@ -37,18 +37,17 @@
         {% if destinos %}
         <div class="row">
           <div class="col">
-            
             {% for destino in destinos %}
-              <div class="destination item">
-                <div class="destination_image">
-                  <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }} Image">
-                </div>
-                <div class="destination_content">
-                  <div class="destination_title">{{ destino.nombreCiudad }}</div>
-                  <div class="destination_subtitle"><p>{{ destino.descripcionCiudad }}</p></div>
-                  <div class="destination_price">{{ destino.precioTour }} - Oferta: {{ destino.ofertaTour }}</div>
-                </div>
+            <div class="destination item">
+              <div class="destination_image">
+                <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }} Image">
               </div>
+              <div class="destination_content">
+                <div class="destination_title">{{ destino.nombreCiudad }}</div>
+                <div class="destination_subtitle"><p>{{ destino.descripcionCiudad }}</p></div>
+                <div class="destination_price">{{ destino.precioTour }} - Oferta: {{ destino.ofertaTour }}</div>
+              </div>
+            </div>
             {% endfor %}
           </div>
         </div>
