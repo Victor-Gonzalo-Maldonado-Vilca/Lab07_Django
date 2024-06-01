@@ -45,7 +45,7 @@
               <div class="destination_content">
                 <div class="destination_title">{{ destino.nombreCiudad }}</div>
                 <div class="destination_subtitle"><p>{{ destino.descripcionCiudad }}</p></div>
-                <div class="destination_price">{{ destino.precioTour }} - Oferta: {{ destino.ofertaTour }}</div>
+                <div class="destination_price">$ {{ destino.precioTour }} - Oferta: {{ destino.ofertaTour }}</div>
               </div>
             </div>
             {% endfor %}
@@ -53,6 +53,9 @@
         </div>
         {% endif %}
       </div>
+    </div>
+    <div class="main-link">
+      <a href="{% url 'index' %}">Página Principal</a>
     </div>
   </body>
 </html>
