@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Destination
 from .forms import DestinationForm, DeleteForm
 # Create your views here.
@@ -21,7 +21,7 @@ def admin(request):
     crear_form = DestinationForm()
     eliminar_form = DeleteForm()
     modificar_form = DestinationForm()
-    listar_form = DestinationForm()
+    destinos = Destination.objects.all()
     
     if request.method == 'POST':
         if 'crear' in request.POST:
@@ -39,15 +39,13 @@ def admin(request):
         elif 'modificar' in request.POST:
             
             pass
-        elif 'listar' in request.POST:
             
-            pass
     
     context = {
         'crear_form': crear_form,
         'eliminar_form': eliminar_form,
         'modificar_form': modificar_form,
-        'listar_form': listar_form,
+        'destinos': destinos,
     }
     return render(request, 'admin.html', context)
     

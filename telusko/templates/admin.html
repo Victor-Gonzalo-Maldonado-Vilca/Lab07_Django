@@ -6,26 +6,37 @@
   </head>
   <body>
     <h1>Agregar Lugar</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ crear_form.as_p }}
         <button type="submit" name="crear">Guardar</button>
     </form>
     <hr>
+    <h1>Eliminar Lugar</h1>
     <form method="post">
         {% csrf_token %}
         {{ eliminar_form.as_p }}
-        <button type="submit" name="Eliminar">Guardar</button>
+        <button type="submit" name="eliminar">Guardar</button>
     </form>
+    <hr>
+    <h1>Modificar Lugar</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" name="Modificar">Guardar</button>
+        <button type="submit" name="modificar">Guardar</button>
     </form>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" name="Listar">Guardar</button>
-    </form>
+    <hr>
+    <h1>Listar Lugares</h1>
+    {% if destinos %}
+      <h2>Lista de Lugares</h2>
+      <ul>
+        {% for destino in destinos %}
+        <li>{{ destino.nombreCiudad }} - {{ destino.descripcionCiudad }} - {{ destino.precioTour }} - Oferta: {{ destino.ofertaTour }}</li>
+        {% if destino.imagenCiudad %}
+          <img src="{{ destino.imagenCiudad.url }}" alt="{{ destino.nombreCiudad }} Image">
+        {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
   </body>
 </html>
