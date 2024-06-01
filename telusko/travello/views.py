@@ -15,3 +15,6 @@ def contact(request):
     
 def news(request):
     return render(request, 'news.html');
+    
+def admin(request):
+    return render(request, 'admin.html');
