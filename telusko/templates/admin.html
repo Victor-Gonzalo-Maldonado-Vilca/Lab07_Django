@@ -8,7 +8,7 @@
     <h1>Agregar Lugar</h1>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ crear_form.as_p }}
         <button type="submit" name="crear">Guardar</button>
     </form>
     <form method="post">
