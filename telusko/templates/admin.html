@@ -11,9 +11,10 @@
         {{ crear_form.as_p }}
         <button type="submit" name="crear">Guardar</button>
     </form>
+    <hr>
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ eliminar_form.as_p }}
         <button type="submit" name="Eliminar">Guardar</button>
     </form>
     <form method="post">

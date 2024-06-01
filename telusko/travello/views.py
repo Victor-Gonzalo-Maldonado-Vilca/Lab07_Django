@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Destination
-from .forms import DestinationForm
+from .forms import DestinationForm, DeleteForm
 # Create your views here.
 
 def index(request):
@@ -19,7 +19,7 @@ def news(request):
     
 def admin(request):
     crear_form = DestinationForm()
-    eliminar_form = DestinationForm()
+    eliminar_form = DeleteForm()
     modificar_form = DestinationForm()
     listar_form = DestinationForm()
     
@@ -30,8 +30,12 @@ def admin(request):
                 crear_form.save()
                 return redirect('admin')
         elif 'eliminar' in request.POST:
-            
-            pass
+            eliminar_form = DeleteForm(request.POST)
+            if eliminar_form.is_valid():
+                nombre_ciudad = eliminar_form.cleaned_data['nombreCiudad']
+                destino = get_object_or_404(Destination, nombreCiudad=nombre_ciudad)
+                destino.delete()
+                return redirect('admin')
         elif 'modificar' in request.POST:
             
             pass
