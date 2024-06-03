@@ -1,0 +1,18 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.5.23)  2 JUN 2024 20:18
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./settings.py
+(settings.py
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 "
+     ""
+? 
